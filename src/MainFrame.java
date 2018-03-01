@@ -1,3 +1,6 @@
+
+import javax.swing.JButton;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -61,7 +64,10 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActionPerformed
-        SecondaryDialog d= new SecondaryDialog(this, true);
+        JButton btn = (JButton) evt.getSource();
+        
+        SecondaryDialog d= new SecondaryDialog(this, true, btn.getText());
+        d.setVisible(true);
        
     }//GEN-LAST:event_jButtonActionPerformed
 
